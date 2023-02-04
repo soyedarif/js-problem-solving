@@ -37,6 +37,72 @@ function largeThanFive(numbers){
 }
 // const arr=[-1,2,-3,4,5,6,-7,8,-9,10];
 // console.log(largeThanFive(arr))
+//Basic-4 (while 7-19 odd numbers)
+let i=7;
+while(i<=19){
+    // console.log(i);
+    i+=2;
+};
+//Basic-5  একটা ফর লুপ দিয়ে কোন একটা array এর সবগুলা উপাদানকে দেখাতে পারবে। সেটা রেগুলার for লুপ হোক বা for of হোক। হলে সেই স্টাইলে একটা কোড লিখে ফেলো। 
+const friends=['Rahim','Karim',"Himel","Sajal","Nahid","Nabil","Ridoy",'Rokib',"Jack","Bill"]
+for (let friend of friends){
+    // console.log(friend)
+}
+//Basic-6  একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো 
+const numbers = [45, 87, 89, 56, 32, 51, 25, 188, 41, 25, 98];
+let large=numbers[0];
+for (let number of numbers){
+    if(number>80){
+        // console.log(number)
+    }
+}
+//Basic-7
+function feetToInch(value){
+    return value*12;
+}
+// console.log(feetToInch(2))
+//Basic-8
+function centimeterToMeter(value){
+    return value*0.01;
+}
+// console.log(centimeterToMeter(100))
+//Basic-9
+function paperRequirements(book1,book2,book3){
+    const firstBookPage=100;
+    const secondBookPage=200;
+    const thirdBookPage=300;
+    const totalFirstBookPages=book1* firstBookPage;
+    const totalSecondBookPages=book2 * secondBookPage;
+    const totalThirdBookPages=book3 * thirdBookPage;
+    const totalPageRequirements=totalFirstBookPages + totalSecondBookPages + totalThirdBookPages;
+    return totalPageRequirements;
+}
+// console.log(paperRequirements(2,2,2))
+const friendsName=['sajid','mamun','kamal','jubayer bin rased', 'chinku'];
+function bestFriend(names){
+    let largest=names[0];
+    for (let name of names){
+        if(name.length>largest.length){
+            largest=name.length;
+        }
+    }
+    return largest;
+}
+// console.log(bestFriend(friendsName))
+
+const myNumbers=[45,87,96,11,63,-56,71,28];
+function oddNumbers(numbers){
+    let positiveNums=[];
+    for(let number of numbers){
+        if(number>=0){
+            positiveNums.push(number)
+        }else{
+            break
+        }
+    }
+    return positiveNums;
+}
+console.log(oddNumbers(myNumbers))
 /* 
 তোমার দুজন বন্ধুর নাম একটি ফাংশনের প্যারামিটার হিসেবে পাস করো। তারপর এই দুইটি নামের মধ্যে যে নামটি বড়ো সেটি reverse অর্ডারে রিটার্ন করো।
 */
@@ -117,6 +183,5 @@ function publicBusFair(persons){
         let costOfPublicBus=remaining*publicBusFare
         return costOfPublicBus;
 }
-console.log(publicBusFair(185))
+// console.log(publicBusFair(185))
 // publicBusFair(365)
-
